@@ -23,7 +23,7 @@ module.exports = {
     extend: {
       colors: {
         primary: '#131424',
-        secondary: '#393A47',
+        secondary: '#393A47', // Assurez-vous que cette ligne est présente
         accent: '#F13024',
       },
       backgroundImage: {
@@ -36,14 +36,9 @@ module.exports = {
         'spin-slow': 'spin 6s linear infinite',
       },
       fontFamily: {
-        poppins: [`var(--font-poppins)`, 'sans-serif'],
-        sora: [`var(--font-sora)`, 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'sans-serif'],
+        sora: ['var(--font-sora)', 'sans-serif'],
       },
-    },
-  },
-  container: {
-    padding: {
-      DEFAULT: '15px',
     },
   },
   plugins: [require('tailwind-scrollbar')],
