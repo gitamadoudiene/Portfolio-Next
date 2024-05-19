@@ -68,9 +68,16 @@ const Home = () => {
        
 
          {/* Conteneur Avatar */}
-         <div className='w-full h-full max-w-[737px] max-h-[678px] '>
-            <Avatar />
-          </div>
+         
+         <motion.div 
+  className='w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg-right-[8%]'
+  style={{ right: '5%' }} // Ajouter cette ligne pour décaler l'avatar vers la droite
+  variants={fadeIn('up', 0.5)}
+  initial="hidden" animate="show" exit="hidden" transition={{duration: 1, ease: 'easeInOut'}}
+>
+  <Avatar />
+</motion.div>
+
        
       </div>
     </div>

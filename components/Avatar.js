@@ -5,10 +5,12 @@ const Avatar = () => {
     <div className='hidden xl:flex xl:max-w-none'>
       
         <Image
-          src='/avatar2.png'
+          src='/avatar3.png'
+          /* src='/unscreen.gif' */
           alt='Avatar'
-          layout='fill'
-          objectFit='contain' // ou une autre valeur selon ton besoin, comme 'cover', 'fill', etc.
+          width={737}
+          height={678}
+          
           className='translate-z-0 w-full h-full'
         />
       </div>
