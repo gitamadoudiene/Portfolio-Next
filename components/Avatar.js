@@ -1,21 +1,18 @@
-//import next image
-
 import Image from "next/image";
 
 const Avatar = () => {
   return (
     <div className='hidden xl:flex xl:max-w-none'>
-      <Image
-      src={'/avatar.png'}
-      width={737}
-      height={678}
-      alt=''
-      className='translate-z-0 w-full'
-      />
-    
-    </div>
-
-
+      
+        <Image
+          src='/avatar2.png'
+          alt='Avatar'
+          layout='fill'
+          objectFit='contain' // ou une autre valeur selon ton besoin, comme 'cover', 'fill', etc.
+          className='translate-z-0 w-full h-full'
+        />
+      </div>
+   
   );
 };
 
