@@ -6,7 +6,7 @@ const Avatar = () => {
       
         <Image
           src='/avatar3.png'
-          /* src='/unscreen.gif' */
+          // src='/QualiGif.gif'
           alt='Avatar'
           width={737}
           height={678}

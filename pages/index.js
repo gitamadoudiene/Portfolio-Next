@@ -21,7 +21,6 @@ const Home = () => {
     <div className='bg-primary/60 h-full'>
       <div className='w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10'>
         <div className='h-full container mx-auto flex flex-col justify-center xl:pt-40 xl:text-left'>
-
           {/* Titre */}
           <div className='h1'>
             <motion.h1
@@ -35,8 +34,6 @@ const Home = () => {
               </span>
             </motion.h1>
           </div>
-
-         
 
           {/* Paragraphe */}
           <motion.p
@@ -59,26 +56,22 @@ const Home = () => {
       {/* Image et composants */}
       <div className='w-[1200px] h-full absolute right-0 top-0'>
         {/* Fond d'écran */}
-        <div className='bg-explosion bg-cover bg-right bg-no-repeat w-full h-full mix-blend-color-dodge translate-z-0'>
+        <div className='bg-explosion bg-cover bg-right bg-no-repeat w-full h-full mix-blend-color-dodge translate-z-0' />
 
+        {/* Conteneur de particules */}
+        <div className='w-full h-full absolute inset-0 pointer-events-none'>
+          <ParticlesContainer />
         </div>
+        
 
-         {/* Conteneur de particules */}
-         <div>   <ParticlesContainer /> </div>
-       
-
-         {/* Conteneur Avatar */}
-         
-         <motion.div 
-  className='w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg-right-[8%]'
-  style={{ right: '5%' }} // Ajouter cette ligne pour décaler l'avatar vers la droite
-  variants={fadeIn('up', 0.5)}
-  initial="hidden" animate="show" exit="hidden" transition={{duration: 1, ease: 'easeInOut'}}
->
-  <Avatar />
-</motion.div>
-
-       
+        {/* Conteneur Avatar */}
+        <motion.div 
+          className='w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0'
+          style={{ right: '5%' }}
+          variants={fadeIn('up', 0.5)}
+          initial="hidden" animate="show" exit="hidden" transition={{duration: 1, ease: 'easeInOut'}}>
+          <Avatar />
+        </motion.div>
       </div>
     </div>
   );
