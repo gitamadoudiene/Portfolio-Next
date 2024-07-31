@@ -29,7 +29,9 @@ const Services = () => {
              animate='show'
              exit='hidden'
             className='mb-4 max-w-[400px] mx-auto lg:mx-0'>
-              I am a full-stack developer
+            Unlock your tech potential with my all-in-one services! 
+            From creating amazing software and mobile apps 
+            to top-notch testing and personalized training. Need strategic advice or a standout brand? Let's make it happen!
             </motion.p>
           </div>
           {/* Services */}

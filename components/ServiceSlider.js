@@ -7,40 +7,40 @@ import { FreeMode, Pagination } from 'swiper';
 
 // Import icons
 import {
-  RxCrop,
+  RxDashboard,
   RxPencil2,
   RxDesktop,
-  RxReader,
   RxRocket,
   RxArrowTopRight,
+  RxMobile,
 } from 'react-icons/rx';
 
 // Data
 const serviceData = [
   {
-    icon: <RxCrop />,
-    title: 'Branding',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: <RxDashboard />,
+    title: 'Training',
+    description: 'Empowering individuals and teams with essential tech skills.',
   },
   {
     icon: <RxPencil2 />,
-    title: 'Design',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Testing',
+    description: 'Ensuring the reliability and performance of your software solutions.',
   },
   {
     icon: <RxDesktop />,
     title: 'Development',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Transforming ideas into robust and scalable software solutions.',
   },
   {
-    icon: <RxReader />,
-    title: 'Copywriting',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: <RxMobile />,
+    title: 'Mobile Dev',
+    description: 'Bringing your vision to life with cutting-edge mobile applications.',
   },
   {
     icon: <RxRocket />,
-    title: 'SEO',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Consulting',
+    description: 'Providing expert guidance and strategic insights to help your business.',
   },
 ];
 
