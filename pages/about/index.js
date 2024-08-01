@@ -212,7 +212,7 @@ const About = () => {
           exit='hidden'
           className='hidden xl:block m-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>With a degree in Computer Science and other certifications, 
           my journey  has been driven by passion and excellence.I have worked as an SI specialist, Digital Manager and software developer. 
-          Currently, I am a freelance  and instructor at Gomycode, and I engage in many projects and consultancy with Clic's Senegal.
+          Currently, I am a freelance  and instructor at Gomycode, and I engage in many projects and consultancy with Clic&apos;s Senegal.
           </motion.p>
 
         {/* counters */}

@@ -3,7 +3,7 @@ import Link from "next/link";
 const ProjectsBtn = () => {
   return (
   <Link href={'/work'} className="relative "> 
-  <div >Let's Go </div>
+  <div >Let&apos;s Go </div>
   </Link>
   
 );
