@@ -3,10 +3,10 @@ const workSlides = {
   slides: [
     {
       images: [
-        { title: 'title', path: '/thumb1.jpg' },
-        { title: 'title', path: '/thumb2.jpg' },
-        { title: 'title', path: '/thumb3.jpg' },
-        { title: 'title', path: '/thumb4.jpg' },
+        { title: 'Field Finder', path: '/FieldFinder.png' },
+        { title: 'BBS', path: '/BBS.png' },
+        { title: 'Salihat', path: '/salihat.png' },
+        { title: 'Trans', path: '/trans.png' },
       ],
     },
     {
