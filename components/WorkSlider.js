@@ -5,7 +5,7 @@ const workSlides = {
       images: [
         { title: 'Field Finder', path: '/FieldFinder.png' },
         { title: 'BBS', path: '/BBS.png' },
-        { title: 'Salihat', path: '/salihat.png' },
+        { title: 'Salihat', path: '/Salihat.png' },
         { title: 'Trans', path: '/trans.png' },
       ],
     },
