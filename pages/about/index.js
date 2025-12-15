@@ -77,6 +77,10 @@ const aboutData = [
         title: 'Universite Dakar Bourguiba',
         stage: '2018 - 2022',
       },
+            {
+        title: 'Woolf University',
+        stage: '2025 -',
+      },
     ],
   },
   {
@@ -91,12 +95,16 @@ const aboutData = [
         stage: '2022 - 2023',
       },
       {
-        title: 'Instructor - Gomycode',
+        title: 'Instructor - Gomycode - Xarala Academy - Unipro',
         stage: '2023 - . ',
       },
       {
-        title: 'FullStack Developer - Clic"s',
+        title: 'FullStack Developer - Phoenix Digital Agency',
         stage: '2021 - .',
+      },
+            {
+        title: 'Associate CTO - Eath',
+        stage: '2025 - .',
       },
     ],
   },
@@ -105,7 +113,18 @@ const aboutData = [
     title: 'certification',
     info: [
      
+       {
+        title: 'Introduction to Cybersecurity - Cisco',
       
+      },
+       {
+        title: 'Analyste en Cybersécurité - Force N',
+      
+      },
+       {
+        title: 'Quality Assurance - FreecodeCamp',
+      
+      },
       {
         title: 'ISTQB Software Testing - Gomycode',
       

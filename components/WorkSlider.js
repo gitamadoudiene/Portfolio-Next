@@ -11,10 +11,10 @@ const workSlides = {
     },
     {
       images: [
-        { title: 'title', path: '/thumb4.jpg' },
-        { title: 'title', path: '/thumb1.jpg' },
-        { title: 'title', path: '/thumb2.jpg' },
-        { title: 'title', path: '/thumb3.jpg' },
+        { title: 'Fesengym', path: '/FESENGYM.png' },
+        { title: 'Learn With AIESS', path: '/lwaapp.png' },
+        { title: 'Camputer Center', path: '/campcenter.png' },
+        { title: 'Eath app', path: '/Eathapp.png' },
       ],
     },
   ],
@@ -71,10 +71,11 @@ const WorkSlider = () => {
                 <div className='absolute inset-0 bg-gradient bg-gradient-to-t from-transparent via-[#e838cc] to-[#4e22bd] opacity-0
                 group-hover:opacity-80 transition-all duration-700 flex items-center justify-center'>
                   {/* title  */}
+                 
                   <div className=' absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300  '>
                       <div className='flex items-center gap-x-2 text-[13px] tracking-[0.2em]'>
                         {/* title part 1 */}
-                         <div className=' delay-100'>LIVE </div>
+                         <div className=' delay-100'>{image.title} </div>
                           {/* title part 2 */}
                           <div className=' translate-y-[500%] group-hover:translate-y-0
                            transition-all duration-300 delay-150'>PROJECT </div>
