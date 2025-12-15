@@ -286,14 +286,14 @@ const About = () => {
         initial='hidden'
         animate='show'
         exit='hidden'
-        className='flex flex-col w-full xl:max-w-[48%] h-[480px]'>
-          <div className='flex flex-wrap justify-center gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
+        className='flex flex-col w-full xl:max-w-[48%] h-auto md:min-h-[480px] px-4 sm:px-6 md:px-0'>
+          <div className='flex flex-wrap justify-center gap-x-2 sm:gap-x-3 md:gap-x-4 lg:gap-x-6 xl:gap-x-8 mx-auto xl:mx-0 mb-4 md:mb-6'>
             {aboutData.map((item, itemIndex) => (
               <div 
                 key={itemIndex}
                 className={`${
                   index === itemIndex && 'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'
-                } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                } cursor-pointer capitalize text-xs sm:text-sm md:text-base lg:text-lg xl:text-lg relative after:w-4 sm:after:w-6 md:after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0 transition-all duration-300`}
                 onClick={() => setIndex(itemIndex)}
               >
                 {item.title}
@@ -301,21 +301,21 @@ const About = () => {
             ))}
           </div>
           {aboutData[index] && aboutData[index].info && aboutData[index].info.length > 0 && (
-            <div className='mt-2'>
+            <div className='mt-4 md:mt-2 overflow-y-auto max-h-[300px] sm:max-h-[350px] md:max-h-none scrollbar-hide'>
               {aboutData[index].info.map((item, itemIndex) => (
-                <div key={itemIndex} className="mb-2 text-center"> {/* Center align content */}
+                <div key={itemIndex} className="mb-3 md:mb-2 text-center px-2 sm:px-0"> {/* Center align content */}
                   {/* title */}
-                  <div>{item.title}</div>
+                  <div className='text-sm sm:text-base break-words'>{item.title}</div>
                   {/* icons or other info */}
                   {item.icons && (
-                    <div className='flex justify-center gap-2 mt-1'> {/* Center align icons */}
+                    <div className='flex flex-wrap justify-center gap-2 sm:gap-3 mt-2'> {/* Center align icons */}
                       {item.icons.map((icon, iconIndex) => (
-                        <span key={iconIndex}>{icon}</span>
+                        <span key={iconIndex} className='text-lg sm:text-xl md:text-2xl'>{icon}</span>
                       ))}
                     </div>
                   )}
                   {item.stage && (
-                    <p className="mt-1 text-center">{item.stage}</p>
+                    <p className="mt-1 sm:mt-2 text-center text-xs sm:text-sm">{item.stage}</p>
                   )}
                 </div>
               ))}

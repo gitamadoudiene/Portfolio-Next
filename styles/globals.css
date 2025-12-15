@@ -19,6 +19,29 @@
   color: #f13024;
 }
 
+/* Custom scrollbar */
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #f13024 #1a1b2e;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: #1a1b2e;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #f13024;
+  border-radius: 4px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #d9260f;
+}
+
 @layer base {
   body {
     @apply bg-secondary overflow-hidden leading-relaxed;
