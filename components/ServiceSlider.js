@@ -15,36 +15,17 @@ import {
   RxMobile,
 } from 'react-icons/rx';
 
-// Data
-const serviceData = [
-  {
-    icon: <RxDashboard />,
-    title: 'Training',
-    description: 'Empowering individuals and teams with essential tech skills.',
-  },
-  {
-    icon: <RxPencil2 />,
-    title: 'Testing',
-    description: 'Ensuring the reliability and performance of your software solutions.',
-  },
-  {
-    icon: <RxDesktop />,
-    title: 'Development',
-    description: 'Transforming ideas into robust and scalable software solutions.',
-  },
-  {
-    icon: <RxMobile />,
-    title: 'Mobile Dev',
-    description: 'Bringing your vision to life with cutting-edge mobile applications.',
-  },
-  {
-    icon: <RxRocket />,
-    title: 'Consulting',
-    description: 'Providing expert guidance and strategic insights to help your business.',
-  },
+// icons, in the same order as the translated services list
+const serviceIcons = [
+  <RxDashboard key="training" />,
+  <RxPencil2 key="testing" />,
+  <RxDesktop key="development" />,
+  <RxMobile key="mobile-dev" />,
+  <RxRocket key="consulting" />,
 ];
 
-const ServiceSlider = () => {
+const ServiceSlider = ({ items }) => {
+  const serviceData = items.map((item, index) => ({ ...item, icon: serviceIcons[index] }));
   return (
     <Swiper
       breakpoints={{

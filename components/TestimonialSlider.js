@@ -1,27 +1,5 @@
-// testimonial data
-const testimonialSlider = [
-  {
-    image: "/pp-rm.png",
-    name: "Kany Fall",
-    position: "CEO -KangePrestation",
-    message:
-      "He is not just a talented developer; he is a great team player who brings positive energy and clear communication to every project.",
-  },
-  {
-    image: "/pp-rm.png",
-    name: "Youssoufa",
-    position: "CEO -AgenceNova",
-    message:
-      "Working with him was a pleasure! He not only built fantastic software but also made sure I felt supported and included.",
-  },
-  {
-    image: "/pp-rm.png",
-    name: "Moustapha Barry",
-    position: "CEO -BMG",
-    message:
-      "His consulting services were invaluable! He provided strategic insights that helped my business grow, and his approachable nature made the entire process enjoyable",
-  },
-];
+// avatar images, in the same order as the translated testimonials list
+const testimonialImages = ["/pp-rm.png", "/pp-rm.png", "/pp-rm.png"];
 
 // Import Swiper styles
 import "swiper/css";
@@ -36,7 +14,11 @@ import Image from "next/image";
 // icons
 import { FaQuoteLeft } from "react-icons/fa";
 
-const TestimonialSlider = () => {
+const TestimonialSlider = ({ items }) => {
+  const testimonialSlider = items.map((person, index) => ({
+    ...person,
+    image: testimonialImages[index],
+  }));
   return (
     <Swiper
       spaceBetween={10}

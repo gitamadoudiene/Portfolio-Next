@@ -4,10 +4,12 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 import ParticlesContainer from '../components/ParticlesContainer';
 import Avatar from '../components/Avatar';
+import { useLanguage } from '../context/LanguageContext';
 
 const Home = () => {
+  const { t } = useLanguage();
   const [textIndex, setTextIndex] = useState(0);
-  const texts = ['Full-Stack Developer', 'Software Tester', 'Passionate Instructor'];
+  const texts = t.home.roles;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,7 +28,7 @@ const Home = () => {
             <motion.h1
               variants={fadeIn('down', 0.2)}
               initial="hidden" animate="show" exit="hidden">
-              Hi, I&apos;m Amadou DIENE <br />
+              {t.home.greeting} <br />
               <span className='text-accent'>
                 <motion.span variants={fadeIn('down', 0.4)} initial="hidden" animate="show" exit="hidden">
                   {texts[textIndex]}
@@ -40,7 +42,7 @@ const Home = () => {
             variants={fadeIn('down', 0.3)}
             initial="hidden" animate="show" exit="hidden"
             className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'>
-            Hey there, I&apos;m Amadou Diene your go-to guy for all things tech. I love building websites and apps using cool tools like React, Next, Angular & Node Js. I&apos;m all about making sure everything works like a charm and teaching others the ropes of coding and testing. Let&apos;s dive into the exciting world of tech and build something awesome together!
+            {t.home.paragraph}
           </motion.p>
 
           {/* Bouton */}

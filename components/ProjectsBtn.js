@@ -1,11 +1,13 @@
 import Link from "next/link";
+import { useLanguage } from "../context/LanguageContext";
 
 const ProjectsBtn = () => {
+  const { t } = useLanguage();
   return (
-  <Link href={'/work'} className="relative "> 
-  <div >Let&apos;s Go </div>
+  <Link href={'/work'} className="relative ">
+  <div >{t.home.cta}</div>
   </Link>
-  
+
 );
 };
 

@@ -196,8 +196,14 @@ import { fadeIn } from '../../variants';
 //counter
 import CountUp from 'react-countup';
 
+// language
+import { useLanguage } from '../../context/LanguageContext';
+
 const About = () => {
+  const { t } = useLanguage();
   const [index, setIndex] = useState(0);
+  const tabKeys = ['skills', 'education', 'experience', 'certification'];
+  const skillCategoryKeys = ['languages', 'technologies', 'design'];
 
   return (
     <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
@@ -221,17 +227,15 @@ const About = () => {
            initial='hidden'
            animate='show'
            exit='hidden'
-          className='h2'> 
-          From deep   <span className='text-accent'>passion and dedication, </span> the pursuit of excellence is born. 
+          className='h2'>
+          {t.about.title1Pre}<span className='text-accent'>{t.about.title1Accent}</span>{t.about.title1Post}
           </motion.h2>
           <motion.p 
           variants={fadeIn('right', 0.4)}
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='hidden xl:block m-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>With a degree in Computer Science and other certifications, 
-          my journey  has been driven by passion and excellence.I have worked as an SI specialist, Digital Manager and software developer. 
-          Currently, I am a freelance  and instructor at Gomycode, and I engage in many projects and consultancy with Clic&apos;s Senegal.
+          className='hidden xl:block m-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>{t.about.paragraph}
           </motion.p>
 
         {/* counters */}
@@ -248,7 +252,7 @@ const About = () => {
                 <CountUp start={0} end={6} duration={5}/> +
               </div>
               <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                years of experience
+                {t.about.stats.experience}
               </div>
             </div>
 
@@ -258,7 +262,7 @@ const About = () => {
                 <CountUp start={0} end={28} duration={5}/> +
               </div>
               <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                Satisfied Clients
+                {t.about.stats.clients}
               </div>
             </div>
 
@@ -268,7 +272,7 @@ const About = () => {
                 <CountUp start={0} end={30} duration={5}/> +
               </div>
               <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                Finished Projects
+                {t.about.stats.projects}
               </div>
             </div>
           </div>
@@ -296,7 +300,7 @@ const About = () => {
                 } cursor-pointer capitalize text-xs sm:text-sm md:text-base lg:text-lg xl:text-lg relative after:w-4 sm:after:w-6 md:after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0 transition-all duration-300`}
                 onClick={() => setIndex(itemIndex)}
               >
-                {item.title}
+                {t.about.tabs[tabKeys[itemIndex]]}
               </div>
             ))}
           </div>
@@ -305,7 +309,11 @@ const About = () => {
               {aboutData[index].info.map((item, itemIndex) => (
                 <div key={itemIndex} className="mb-3 md:mb-2 text-center px-2 sm:px-0"> {/* Center align content */}
                   {/* title */}
-                  <div className='text-sm sm:text-base break-words'>{item.title}</div>
+                  <div className='text-sm sm:text-base break-words'>
+                    {tabKeys[index] === 'skills'
+                      ? t.about.skillCategories[skillCategoryKeys[itemIndex]]
+                      : item.title}
+                  </div>
                   {/* icons or other info */}
                   {item.icons && (
                     <div className='flex flex-wrap justify-center gap-2 sm:gap-3 mt-2'> {/* Center align icons */}

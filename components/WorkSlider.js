@@ -42,7 +42,7 @@ import {
 
 import { BsArrowRight } from 'react-icons/bs';
 
-const WorkSlider = () => {
+const WorkSlider = ({ projectLabel }) => {
   return (
     <Swiper
       spaceBetween={10}
@@ -78,7 +78,7 @@ const WorkSlider = () => {
                          <div className=' delay-100'>{image.title} </div>
                           {/* title part 2 */}
                           <div className=' translate-y-[500%] group-hover:translate-y-0
-                           transition-all duration-300 delay-150'>PROJECT </div>
+                           transition-all duration-300 delay-150'>{projectLabel} </div>
                            {/* icons */}
                          <div className='text-x translate-y-[500%]
                          group-hover:translate-y-0 transition-all duration-300
