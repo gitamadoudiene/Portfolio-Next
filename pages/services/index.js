@@ -7,7 +7,11 @@ import Circles from "../../components/Circles";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 
+// language
+import { useLanguage } from "../../context/LanguageContext";
+
 const Services = () => {
+  const { t } = useLanguage();
   return (
     <div className="h-full bg-primary/30 py-36 flex items-center">
       <Circles />
@@ -22,7 +26,7 @@ const Services = () => {
               exit="hidden"
               className="h2 xl:mt-8 flex items-center justify-center lg:justify-start whitespace-nowrap"
             >
-              My Services<span className="text-accent">.</span>
+              {t.services.heading}<span className="text-accent">.</span>
             </motion.h2>
             <motion.p
               variants={fadeIn("up", 0.4)}
@@ -31,10 +35,7 @@ const Services = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Unlock your tech potential with my all-in-one services! From
-              creating amazing software and mobile apps to top-notch testing and
-              personalized training. Need strategic advice or a standout brand?
-              Let&apos;s make it happen!
+              {t.services.paragraph}
             </motion.p>
           </div>
           {/* Services */}
@@ -45,7 +46,7 @@ const Services = () => {
             exit="hidden"
             className="w-full xl:max-w-[65%]"
           >
-            <ServiceSlider />
+            <ServiceSlider items={t.services.items} />
           </motion.div>
         </div>
       </div>

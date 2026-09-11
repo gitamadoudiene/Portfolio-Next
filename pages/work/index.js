@@ -7,7 +7,11 @@ import Circles from '../../components/Circles';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 
+// language
+import { useLanguage } from '../../context/LanguageContext';
+
 const Work = () => {
+  const { t } = useLanguage();
   return (
     <div className="h-full bg-primary/30 py-36 flex items-center">
       <Circles />
@@ -21,7 +25,7 @@ const Work = () => {
             animate='show'
             exit='hidden'
              className='h2 xl:mt-12 flex items-center justify-center lg:justify-start whitespace-nowrap'>
-              My Work
+              {t.work.heading}
               <span className='text-accent'>.</span>
             </motion.h2>
             <motion.p
@@ -30,20 +34,17 @@ const Work = () => {
              animate='show'
              exit='hidden'
             className='mb-4 max-w-[400px] mx-auto lg:mx-0'>
-              Dive into my world of tech creations! 
-              From innovative software and sleek mobile apps 
-              to flawless testing and dynamic training sessions. 
-              Check out my projects and see how I turn ideas into reality!
+              {t.work.paragraph}
             </motion.p>
           </div>
           {/* Services */}
-          <motion.div 
+          <motion.div
            variants={fadeIn('down', 0.6)}
            initial='hidden'
            animate='show'
            exit='hidden'
           className='w-full xl:max-w-[65%]'>
-            <WorkSlider />
+            <WorkSlider projectLabel={t.work.projectLabel} />
           </motion.div>
         </div>
       </div>
